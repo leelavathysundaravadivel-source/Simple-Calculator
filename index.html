@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS Calculator | Assignment 7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+<main class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow-lg border-0 rounded-4 w-100" style="max-width: 500px;">
+        <div class="card-header bg-dark text-white text-center py-4 rounded-top-4">
+            <h3 class="fw-bold mb-0">JS Calculator</h3>
+            <small class="opacity-75">Basic & Advanced Operations</small>
+        </div>
+        
+        <div class="card-body p-4">
+            <div class="mb-3">
+                <label class="form-label fw-bold small text-uppercase">Input Number 1 (x)</label>
+                <input type="number" id="num1" class="form-control form-control-lg" placeholder="Enter number">
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-bold small text-uppercase">Input Number 2 (y)</label>
+                <input type="number" id="num2" class="form-control form-control-lg" placeholder="Enter number">
+            </div>
+
+            <div class="row g-2 mb-3">
+                <div class="col-3"><button class="btn btn-primary w-100 py-3 fw-bold" onclick="handleCalc('add')">+</button></div>
+                <div class="col-3"><button class="btn btn-primary w-100 py-3 fw-bold" onclick="handleCalc('sub')">-</button></div>
+                <div class="col-3"><button class="btn btn-primary w-100 py-3 fw-bold" onclick="handleCalc('mul')">×</button></div>
+                <div class="col-3"><button class="btn btn-primary w-100 py-3 fw-bold" onclick="handleCalc('div')">÷</button></div>
+            </div>
+
+            <div class="row g-2 mb-4">
+                <div class="col-4"><button class="btn btn-outline-dark w-100 py-2 small fw-bold" onclick="handleCalc('sqrt')">√x</button></div>
+                <div class="col-4"><button class="btn btn-outline-dark w-100 py-2 small fw-bold" onclick="handleCalc('cbrt')">∛x</button></div>
+                <div class="col-4"><button class="btn btn-outline-dark w-100 py-2 small fw-bold" onclick="handleCalc('pow')">x^y</button></div>
+            </div>
+
+            <div class="result-container p-4 rounded-3 text-center bg-dark text-info">
+                <small class="text-secondary d-block text-uppercase mb-1">Result</small>
+                <h2 id="result" class="display-6 fw-bold mb-0">0</h2>
+            </div>
+            
+            <button class="btn btn-link btn-sm w-100 text-decoration-none text-muted mt-3" onclick="resetAll()">Clear All</button>
+        </div>
+    </div>
+</main>
+
+<script src="js/index.js"></script>
+</body>
+</html>
